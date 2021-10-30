@@ -57,8 +57,8 @@ describe( '有道翻译' , ()=> {
 
       spyOn( youdao , 'transform' );
 
-      nock( 'https://fanyi.youdao.com' )
-        .get( '/openapi.do' )
+      nock( 'https://dict.poemhub.top' )
+        .get( '/dict/word/translate' )
         .query( true )
         .reply( 200 , rawRes );
 
@@ -74,8 +74,8 @@ describe( '有道翻译' , ()=> {
     } );
 
     it( '在网络错误时应该被 reject' , done => {
-      nock( 'https://fanyi.youdao.com' )
-        .get( '/openapi.do' )
+      nock( 'https://dict.poemhub.top' )
+        .get( '/dict/word/translate' )
         .query( true )
         .replyWithError( 'some network error message' );
 
