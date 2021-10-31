@@ -29,11 +29,6 @@ module.exports = ( Class )=> {
         expect( typeof c.link ).toBe( 'string' );
       } );
 
-      //describe( '的 translate 方法' , ()=> {
-      //  it( '正常情况下回返回一个查询结果对象' );
-      //  it( '若网络错误则返回 SuperAgent 错误对象' );
-      //} );
-
       describe( '的 detect 方法' , ()=> {
 
         it( '必须是一个函数' , ()=> {
@@ -69,16 +64,9 @@ module.exports = ( Class )=> {
           } );
         } );
 
-        //describe( '若查询对象没有 form 属性' , ()=> {
-        //  it( '若支持此语种则返回标准语种字符串' );
-        //  it( '若不支持此语种则返回 null' );
-        //  it( '若检测语种时发生网络错误则返回 SuperAgent 的错误对象' );
-        //} );
       } );
 
       describe( '的 audio 方法' , ()=> {
-
-        //it( '若支持则返回语音地址字符串' );
 
         it( '不支持朗读或者不支持此查询对象的语种会 reject null' , ( done )=> {
           c.audio( { text : 'test' , from : 'no this lang' } ).then( ()=> {
