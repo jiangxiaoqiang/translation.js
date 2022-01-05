@@ -685,6 +685,7 @@ Translation.YouDao = require('./youdao');
 Translation.Bing = require('./bing');
 Translation.Google = require('./google');
 Translation.GoogleCN = require('./google-cn');
+Translation.Reddwarf = require('./reddwarf');
 
 module.exports = Translation;
 
